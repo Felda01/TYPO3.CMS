@@ -142,6 +142,10 @@ class VimeoRenderer implements FileRendererInterface
             $urlParams[] = 'loop=1';
         }
 
+        if (!empty($options['background'])) {
+            $urlParams[] = 'background=1';
+        }
+
         if (isset($options['api']) && (int)$options['api'] === 1) {
             $urlParams[] = 'api=1';
         }
