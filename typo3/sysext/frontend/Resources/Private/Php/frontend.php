@@ -18,6 +18,9 @@ if (PHP_VERSION_ID < 70400 || PHP_VERSION_ID >= 90000) {
     die('This version of TYPO3 CMS requires PHP >= 7.4 and < 9.0');
 }
 
+// https bugfix
+$_SERVER['HTTPS']='on';
+
 // Set up the application for the frontend
 call_user_func(function () {
     $classLoader = require __DIR__ . '/../../../../../../vendor/autoload.php';
